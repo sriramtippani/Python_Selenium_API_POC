@@ -1,0 +1,292 @@
+{
+	"info": {
+		"_postman_id": "c5c9d58e-d69c-40ea-8099-452513738cb4",
+		"name": "MyAPI_1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24559603",
+		"_collection_link": "https://orange-capsule-955654.postman.co/workspace/MyWorldPractice~a15e0b88-17f8-43d7-84eb-fbb4efccced4/collection/24559603-c5c9d58e-d69c-40ea-8099-452513738cb4?action=share&source=collection_link&creator=24559603"
+	},
+	"item": [
+		{
+			"name": "Post Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.lessThan(100);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Content-Type is present in the headers\", function () {\r",
+							"    pm.response.to.have.header(\"content-type\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Content-Type header has value 'application/json'\", function () {\r",
+							"    pm.expect(pm.response.headers.get(\"content-type\")).to.include(\"application/json\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const randomFirstName = Math.random().toString(36).substring(7);\r",
+							"const randomLastName = Math.random().toString(36).substring(7);\r",
+							"const randomPhoneNumber = Math.floor(Math.random() * 9000000000) + 1000000000;\r",
+							"const randomZipCode = Math.floor(Math.random() * 90000) + 10000;\r",
+							"\r",
+							"pm.environment.set(\"first_Name\", randomFirstName);\r",
+							"pm.environment.set(\"last_Name\", randomLastName);\r",
+							"pm.environment.set(\"phone_Number\", randomPhoneNumber);\r",
+							"pm.environment.set(\"zip_Code\", randomZipCode);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"id\": \"5\",\r\n            \"firstName\": \"{{first_Name}}\",\r\n            \"lastName\": \"{{last_Name}}\",\r\n            \"phoneNumber\": \"{{phone_Number}}\",\r\n            \"address\": {\r\n              \"street\": \"123 Main Street\",\r\n              \"city\": \"Springfield\",\r\n              \"state\": \"IL\",\r\n              \"zipCode\": \"{{zip_Code}}\"\r\n            }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{MyAPI_1_Collection_URL}}",
+					"host": [
+						"{{MyAPI_1_Collection_URL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(100);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Content-Type is present in the headers\", function () {\r",
+							"    pm.response.to.have.header(\"content-type\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Content-Type header has value 'application/json'\", function () {\r",
+							"    pm.expect(pm.response.headers.get(\"content-type\")).to.include(\"application/json\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Verify First Name\", function () {\r",
+							"    pm.expect(pm.response.json().firstName).to.eql(pm.variables.get(\"first_Name\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Verify Last Name\", function () {\r",
+							"    pm.expect(pm.response.json().lastName).to.eql(pm.variables.get(\"last_Name\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"verify phone number\", function () {\r",
+							"    pm.expect(pm.response.json().phoneNumber).to.eql(pm.variables.get(\"phone_Number\").toString());\r",
+							"});  \r",
+							"pm.test(\"verify zip code\", function () {\r",
+							"    pm.expect(pm.response.json().address.zipCode).to.eql(pm.variables.get(\"zip_Code\").toString());\r",
+							"});\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{MyAPI_1_Collection_URL}}/5",
+					"host": [
+						"{{MyAPI_1_Collection_URL}}"
+					],
+					"path": [
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Request",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const randomFirstName = Math.random().toString(36).substring(7);\r",
+							"const randomLastName = Math.random().toString(36).substring(7);\r",
+							"\r",
+							"pm.environment.set(\"first_Name\", randomFirstName);\r",
+							"pm.environment.set(\"last_Name\", randomLastName);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"First name is not equal to the previous value\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.firstname).to.not.equal(pm.variables.get(\"first_Name\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Last name is not equal to the previous value\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.lastname).to.not.equal(pm.variables.get(\"last_Name\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.lessThan(100);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Content-Type is present in the headers\", function () {\r",
+							"    pm.response.to.have.header(\"content-type\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Content-Type header has value 'application/json'\", function () {\r",
+							"    pm.expect(pm.response.headers.get(\"content-type\")).to.include(\"application/json\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"id\": \"5\",\r\n            \"firstName\": \"{{first_Name}}\",\r\n            \"lastName\": \"{{last_Name}}\",\r\n            \"phoneNumber\": \"75334795932\",\r\n            \"address\": {\r\n              \"street\": \"123 Main Street\",\r\n              \"city\": \"Springfield\",\r\n              \"state\": \"IL\",\r\n              \"zipCode\": \"764839\"\r\n            }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{MyAPI_1_Collection_URL}}/5",
+					"host": [
+						"{{MyAPI_1_Collection_URL}}"
+					],
+					"path": [
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 100ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(150);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Content-Type is present in the headers\", function () {\r",
+							"    pm.response.to.have.header(\"content-type\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Content-Type header has value 'application/json'\", function () {\r",
+							"    pm.expect(pm.response.headers.get(\"content-type\")).to.include(\"application/json\");\r",
+							"});\r",
+							"\r",
+							"pm.environment.unset(\"first_Name\");\r",
+							"pm.environment.unset(\"last_Name\");\r",
+							"pm.environment.unset(\"phone_Number\");\r",
+							"pm.environment.unset(\"zip_Code\");"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{MyAPI_1_Collection_URL}}/5",
+					"host": [
+						"{{MyAPI_1_Collection_URL}}"
+					],
+					"path": [
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "MyAPI_1_Collection_URL",
+			"value": "http://localhost:3000/personalData",
+			"type": "string"
+		}
+	]
+}
