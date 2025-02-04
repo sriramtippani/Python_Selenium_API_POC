@@ -1,0 +1,1053 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.0 on win32)" generated="2025-02-04T19:41:24.055773" rpa="false" schemaversion="5">
+<suite id="s1" name="Katalon" source="z:\API Testing\Robot_Selenium_POC\rf-tests\Katalon.robot">
+<test id="s1-t1" name="Scenario5: Make Appointment and Validate Confirmation For All Facilities Through Parallel Iteration In Herokuapp Website" line="7">
+<kw name="Open URL In Chrome Browser" owner="Websites">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:41:24.899005" level="INFO">Opening browser 'Chrome' to base url 'https://demoqa.com/webtables'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-04T19:41:24.898725" elapsed="34.375595"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-04T19:41:59.274765" elapsed="0.036405"/>
+</kw>
+<arg>${DEMO_QA_URL}</arg>
+<doc>This Keyword Used To Verify Open Web Tables Page In Chrome Browser</doc>
+<status status="PASS" start="2025-02-04T19:41:24.897625" elapsed="34.414093"/>
+</kw>
+<kw name="Get First Name From First Row Of Web Table" owner="Websites">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${WEBTABLE}[TXT_FIRST_NAME]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-04T19:41:59.313695" elapsed="0.033858"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${WEBTABLE}[TXT_FIRST_NAME]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-04T19:41:59.347942" elapsed="0.290240"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:41:59.654179" level="INFO">${First Name} = Cierra</msg>
+<var>${First Name}</var>
+<arg>${WEBTABLE}[TXT_FIRST_NAME]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:41:59.638578" elapsed="0.015794"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:41:59.798522" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-42.png"&gt;&lt;img src="selenium-screenshot-42.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-02-04T19:41:59.654558" elapsed="0.144182"/>
+</kw>
+<return>
+<value>${First Name}</value>
+<status status="PASS" start="2025-02-04T19:41:59.798852" elapsed="0.000108"/>
+</return>
+<msg time="2025-02-04T19:41:59.799186" level="INFO">${First Name} = Cierra</msg>
+<var>${First Name}</var>
+<doc>This Keyword Used To Verify Get First Name From First Row Of Web Table</doc>
+<status status="PASS" start="2025-02-04T19:41:59.313032" elapsed="0.486769"/>
+</kw>
+<kw name="Get Last Name From First Row Of Web Table" owner="Websites">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${WEBTABLE}[TXT_LAST_NAME]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-04T19:41:59.800939" elapsed="0.014728"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${WEBTABLE}[TXT_LAST_NAME]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-04T19:41:59.815909" elapsed="0.267962"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:00.096961" level="INFO">${Last Name} = Vega</msg>
+<var>${Last Name}</var>
+<arg>${WEBTABLE}[TXT_LAST_NAME]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:00.084463" elapsed="0.012653"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:00.243988" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-43.png"&gt;&lt;img src="selenium-screenshot-43.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-02-04T19:42:00.097300" elapsed="0.146904"/>
+</kw>
+<return>
+<value>${Last Name}</value>
+<status status="PASS" start="2025-02-04T19:42:00.244303" elapsed="0.000095"/>
+</return>
+<msg time="2025-02-04T19:42:00.244530" level="INFO">${Last Name} = Vega</msg>
+<var>${Last Name}</var>
+<doc>This Keyword Used To Verify Get Last Name From First Row Of Web Table</doc>
+<status status="PASS" start="2025-02-04T19:41:59.800635" elapsed="0.443954"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-04T19:42:00.245536" elapsed="2.185852"/>
+</kw>
+<kw name="Create API Session" owner="Requests">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-02-04T19:42:02.433645" level="INFO">Creating Session using : alias=reqres_session, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>reqres_session</arg>
+<arg>${REQUEST}[BASE_URL]</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-02-04T19:42:02.433311" elapsed="0.001562"/>
+</kw>
+<doc>This Keyword Verifies Create API Session</doc>
+<status status="PASS" start="2025-02-04T19:42:02.432596" elapsed="0.002427"/>
+</kw>
+<kw name="Make POST Request" owner="Requests">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-02-04T19:42:02.436594" level="INFO">&amp;{Data} = { first_name=Cierra | last_name=Vega }</msg>
+<var>&amp;{Data}</var>
+<arg>first_name=${First Name}</arg>
+<arg>last_name=${Last Name}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-02-04T19:42:02.436184" elapsed="0.000526"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-02-04T19:42:03.018198" level="INFO">POST Request : url=https://reqres.in/api/users 
+ path_url=/api/users 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '45', 'Content-Type': 'application/json'} 
+ body=b'{"first_name": "Cierra", "last_name": "Vega"}' 
+ </msg>
+<msg time="2025-02-04T19:42:03.018704" level="INFO">POST Response : url=https://reqres.in/api/users 
+ status=201, reason=Created 
+ headers={'Date': 'Tue, 04 Feb 2025 14:12:01 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '92', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1738678321&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=WDPddAHKbD%2BvJhaUVvCrfXigic2zUjgplblrV2UO3lU%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1738678321&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=WDPddAHKbD%2BvJhaUVvCrfXigic2zUjgplblrV2UO3lU%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"5c-9XVTmFzSv8160qJXcZLhN5CNL8s"', 'Via': '1.1 vegur', 'cf-cache-status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '90cb40d4f819a91d-MAA', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=49801&amp;min_rtt=48077&amp;rtt_var=19260&amp;sent=5&amp;recv=7&amp;lost=0&amp;retrans=0&amp;sent_bytes=2835&amp;recv_bytes=888&amp;delivery_rate=78311&amp;cwnd=252&amp;unsent_bytes=0&amp;cid=692e25b42da606ba&amp;ts=408&amp;x=0"'} 
+ body={"first_name":"Cierra","last_name":"Vega","id":"604","createdAt":"2025-02-04T14:12:01.695Z"} 
+ </msg>
+<msg time="2025-02-04T19:42:03.018975" level="INFO">C:\Users\srira\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-02-04T19:42:03.019996" level="INFO">${POST Response} = &lt;Response [201]&gt;</msg>
+<var>${POST Response}</var>
+<arg>reqres_session</arg>
+<arg>${EndPoints}</arg>
+<arg>json=${Data}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-02-04T19:42:02.436827" elapsed="0.583455"/>
+</kw>
+<return>
+<value>${POST Response}</value>
+<status status="PASS" start="2025-02-04T19:42:03.020480" elapsed="0.000102"/>
+</return>
+<msg time="2025-02-04T19:42:03.020740" level="INFO">${POST Response} = &lt;Response [201]&gt;</msg>
+<var>${POST Response}</var>
+<arg>${REQUEST}[PATH_PARAMETER]</arg>
+<arg>${First Name}</arg>
+<arg>${Last Name}</arg>
+<doc>This Keyword Verifies Make POST Request</doc>
+<status status="PASS" start="2025-02-04T19:42:02.435670" elapsed="0.585142"/>
+</kw>
+<kw name="Get ID From Response" owner="Requests">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-04T19:42:03.022987" level="INFO">${Response JSON} = {'first_name': 'Cierra', 'last_name': 'Vega', 'id': '604', 'createdAt': '2025-02-04T14:12:01.695Z'}</msg>
+<var>${Response JSON}</var>
+<arg>${Response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-04T19:42:03.022406" elapsed="0.000696"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-04T19:42:03.023533" level="INFO">${Id} = 604</msg>
+<var>${Id}</var>
+<arg>${Response JSON}</arg>
+<arg>id</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-04T19:42:03.023283" elapsed="0.000359"/>
+</kw>
+<return>
+<value>${Id}</value>
+<status status="PASS" start="2025-02-04T19:42:03.023789" elapsed="0.000133"/>
+</return>
+<msg time="2025-02-04T19:42:03.024126" level="INFO">${Id} = 604</msg>
+<var>${Id}</var>
+<arg>${POST Response}</arg>
+<doc>Extracts ID From The JSON Response</doc>
+<status status="PASS" start="2025-02-04T19:42:03.021959" elapsed="0.002258"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-04T19:42:03.026381" level="INFO">The ID from the response is: 604</msg>
+<arg>The ID from the response is: ${id}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-04T19:42:03.026026" elapsed="0.000507"/>
+</kw>
+<kw name="Validate Response Status Code" owner="Requests">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-02-04T19:42:03.028744" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${Response.status_code}</arg>
+<arg>${Expected Response}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-04T19:42:03.027854" elapsed="0.001289"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${Response.reason}</arg>
+<arg>${Status Code Text}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-04T19:42:03.029534" elapsed="0.000953"/>
+</kw>
+<arg>${POST Response}</arg>
+<arg>201</arg>
+<arg>Created</arg>
+<doc>This Keyword Verifies Validate Response Status Code</doc>
+<status status="PASS" start="2025-02-04T19:42:03.027198" elapsed="0.003504"/>
+</kw>
+<kw name="Validate Response Header" owner="Requests">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-04T19:42:03.033872" level="INFO">${Content Type} = application/json; charset=utf-8</msg>
+<var>${Content Type}</var>
+<arg>${Response.headers}</arg>
+<arg>Content-Type</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-04T19:42:03.032996" elapsed="0.002100"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${Content Type}</arg>
+<arg>application/json; charset=utf-8</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-04T19:42:03.035470" elapsed="0.000414"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-04T19:42:03.036817" level="INFO">${Connection} = keep-alive</msg>
+<var>${Connection}</var>
+<arg>${Response.headers}</arg>
+<arg>Connection</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-04T19:42:03.036133" elapsed="0.000852"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${Connection}</arg>
+<arg>keep-alive</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-04T19:42:03.037204" elapsed="0.000292"/>
+</kw>
+<arg>${POST Response}</arg>
+<doc>This Keyword Verifies Validate Response Header</doc>
+<status status="PASS" start="2025-02-04T19:42:03.032390" elapsed="0.005253"/>
+</kw>
+<kw name="Open URL In Chrome Browser" owner="Websites">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:03.039757" level="INFO">Opening browser 'Chrome' to base url 'https://katalon-demo-cura.herokuapp.com'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-04T19:42:03.039395" elapsed="4.875926"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-04T19:42:07.915644" elapsed="0.025618"/>
+</kw>
+<arg>${DEMO_CURA_URL}</arg>
+<doc>This Keyword Used To Verify Open Web Tables Page In Chrome Browser</doc>
+<status status="PASS" start="2025-02-04T19:42:03.038789" elapsed="4.902875"/>
+</kw>
+<kw name="Login To CURA Healthcare Service" owner="Websites">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:07.943865" level="INFO">Clicking element '//a[@id='btn-make-appointment']'.</msg>
+<arg>${LOGIN}[BTN_MAKE_APPOINTMENT]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:07.943656" elapsed="0.468692"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:08.413697" level="INFO">Typing text 'John Doe' into text field '//input[@id='txt-username']'.</msg>
+<arg>${LOGIN}[INP_TXT_USERNAME]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:08.412793" elapsed="0.099172"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:08.512498" level="INFO">Typing text 'ThisIsNotAPassword' into text field '//input[@id='txt-password']'.</msg>
+<arg>${LOGIN}[INP_TXT_PASSWORD]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:08.512230" elapsed="0.111444"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:08.624182" level="INFO">Clicking button '//button[@id='btn-login']'.</msg>
+<arg>${LOGIN}[BTN_LOGIN]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:08.623926" elapsed="0.641304"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:09.425944" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-44.png"&gt;&lt;img src="selenium-screenshot-44.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.265489" elapsed="0.160695"/>
+</kw>
+<arg>${LOGIN}[USERNAME]</arg>
+<arg>${LOGIN}[PASSWORD]</arg>
+<doc>This Keyword Verifies Login To CURA Healthcare Service</doc>
+<status status="PASS" start="2025-02-04T19:42:07.943246" elapsed="1.483049"/>
+</kw>
+<kw name="Get Tomorrow Date" owner="Websites">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-02-04T19:42:09.427502" level="INFO">${today} = 2025-02-04</msg>
+<var>${today}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.427275" elapsed="0.000444"/>
+</kw>
+<kw name="Add Time To Date" owner="DateTime">
+<msg time="2025-02-04T19:42:09.430395" level="INFO">${tomorrow} = 2025-02-05 00:00:00.000</msg>
+<var>${tomorrow}</var>
+<arg>${today}</arg>
+<arg>1 day</arg>
+<doc>Adds time to date and returns the resulting date.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.427864" elapsed="0.002652"/>
+</kw>
+<kw name="Convert Date" owner="DateTime">
+<msg time="2025-02-04T19:42:09.430895" level="INFO">${day} = 05</msg>
+<var>${day}</var>
+<arg>${tomorrow}</arg>
+<arg>%d</arg>
+<doc>Converts between supported `date formats`.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.430664" elapsed="0.000295"/>
+</kw>
+<kw name="Convert Date" owner="DateTime">
+<msg time="2025-02-04T19:42:09.431246" level="INFO">${month} = 02</msg>
+<var>${month}</var>
+<arg>${tomorrow}</arg>
+<arg>%m</arg>
+<doc>Converts between supported `date formats`.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.431067" elapsed="0.000241"/>
+</kw>
+<kw name="Convert Date" owner="DateTime">
+<msg time="2025-02-04T19:42:09.431593" level="INFO">${year} = 2025</msg>
+<var>${year}</var>
+<arg>${tomorrow}</arg>
+<arg>%Y</arg>
+<doc>Converts between supported `date formats`.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.431423" elapsed="0.000229"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-04T19:42:09.431904" level="INFO">${visit_date} = 05/02/2025</msg>
+<var>${visit_date}</var>
+<arg>${day}/${month}/${year}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.431752" elapsed="0.000207"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-02-04T19:42:09.432277" level="INFO">&amp;{Date} = { Visit Date=05/02/2025 | Day=05 }</msg>
+<var>&amp;{Date}</var>
+<arg>Visit Date=${visit_date}</arg>
+<arg>Day=${day}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.432063" elapsed="0.000290"/>
+</kw>
+<return>
+<value>${Date}</value>
+<status status="PASS" start="2025-02-04T19:42:09.432428" elapsed="0.000066"/>
+</return>
+<msg time="2025-02-04T19:42:09.432604" level="INFO">${Date} = {'Visit Date': '05/02/2025', 'Day': '05'}</msg>
+<var>${Date}</var>
+<doc>This Keyword Verifies Get Tomorrow's Date</doc>
+<status status="PASS" start="2025-02-04T19:42:09.426944" elapsed="0.005717"/>
+</kw>
+<kw name="Read Excel Data Into List" owner="Websites">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-04T19:42:09.433715" level="INFO">${File Path} = ..\Robot_Selenium_POC\rf-testdata\Book1.xlsx</msg>
+<var>${File Path}</var>
+<arg>..\\Robot_Selenium_POC\\rf-testdata\\Book1.xlsx</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.433581" elapsed="0.000201"/>
+</kw>
+<kw name="Open Workbook" owner="ExcellentLibrary">
+<arg>${File Path}</arg>
+<doc>Opens the workbook found at the given file path.
+_NOTE_: Please note that at present _XLS_ files are not supported.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.433877" elapsed="0.004245"/>
+</kw>
+<kw name="Switch Sheet" owner="ExcellentLibrary">
+<arg>Sheet1</arg>
+<doc>Switches to the sheet with the supplied name within the active
+workbook.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.438409" elapsed="0.000192"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-02-04T19:42:09.439017" level="INFO">@{Data List} = [ ]</msg>
+<var>@{Data List}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.438750" elapsed="0.000422"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Read From Cell" owner="ExcellentLibrary">
+<msg time="2025-02-04T19:42:09.439931" level="INFO">${Cell Value} = Tokyo CURA Healthcare Center</msg>
+<var>${Cell Value}</var>
+<arg>(1, ${i})</arg>
+<doc>Reads the data from the cell identified by the given locator.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.439717" elapsed="0.000306"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${Data List}</arg>
+<arg>${Cell Value}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.440185" elapsed="0.000209"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2025-02-04T19:42:09.439552" elapsed="0.000915"/>
+</iter>
+<iter>
+<kw name="Read From Cell" owner="ExcellentLibrary">
+<msg time="2025-02-04T19:42:09.440852" level="INFO">${Cell Value} = Hongkong CURA Healthcare Center</msg>
+<var>${Cell Value}</var>
+<arg>(1, ${i})</arg>
+<doc>Reads the data from the cell identified by the given locator.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.440695" elapsed="0.000231"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${Data List}</arg>
+<arg>${Cell Value}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.441024" elapsed="0.000123"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2025-02-04T19:42:09.440590" elapsed="0.000617"/>
+</iter>
+<iter>
+<kw name="Read From Cell" owner="ExcellentLibrary">
+<msg time="2025-02-04T19:42:09.441531" level="INFO">${Cell Value} = Seoul CURA Healthcare Center</msg>
+<var>${Cell Value}</var>
+<arg>(1, ${i})</arg>
+<doc>Reads the data from the cell identified by the given locator.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.441395" elapsed="0.000198"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${Data List}</arg>
+<arg>${Cell Value}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.441685" elapsed="0.000119"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2025-02-04T19:42:09.441301" elapsed="0.000558"/>
+</iter>
+<var>${i}</var>
+<value>2</value>
+<value>5</value>
+<status status="PASS" start="2025-02-04T19:42:09.439285" elapsed="0.002648"/>
+</for>
+<kw name="Close Workbook" owner="ExcellentLibrary">
+<doc>Closes the workbook identified by the supplied alias.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.442046" elapsed="0.000113"/>
+</kw>
+<return>
+<value>${Data List}</value>
+<status status="PASS" start="2025-02-04T19:42:09.442221" elapsed="0.000076"/>
+</return>
+<msg time="2025-02-04T19:42:09.442429" level="INFO">@{Facilities} = [ Tokyo CURA Healthcare Center | Hongkong CURA Healthcare Center | Seoul CURA Healthcare Center ]</msg>
+<var>@{Facilities}</var>
+<doc>Reads 4 rows of data from the first column in Sheet1.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.433358" elapsed="0.009137"/>
+</kw>
+<kw name="Make Appointment And Confirm The Details" owner="Websites">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-04T19:42:09.444597" level="INFO">${Counter} = 0</msg>
+<var>${Counter}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.444403" elapsed="0.000276"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2025-02-04T19:42:09.444920" level="INFO">Length is 3.</msg>
+<msg time="2025-02-04T19:42:09.445009" level="INFO">${Facilities Length} = 3</msg>
+<var>${Facilities Length}</var>
+<arg>${Facilities}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.444794" elapsed="0.000271"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-04T19:42:09.447254" level="INFO">${Counter} = 1</msg>
+<var>${Counter}</var>
+<arg>${${Counter} + 1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.446647" elapsed="0.000724"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-04T19:42:09.447639" level="INFO">Booking appointment for Tokyo CURA Healthcare Center</msg>
+<arg>Booking appointment for ${Facility}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.447501" elapsed="0.000348"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:09.448263" level="INFO">Selecting options from selection list 'id=combo_facility' by value Tokyo CURA Healthcare Center.</msg>
+<arg>id=combo_facility</arg>
+<arg>${Facility}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.448023" elapsed="0.049130"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:09.497908" level="INFO">Clicking element '//input[@id="chk_hospotal_readmission"]'.</msg>
+<arg>${MAKEAPPOINTMENT}[CHK_APPLY_HOSPITAL_READMISSION]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.497541" elapsed="0.054374"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:09.552531" level="INFO">Clicking element '//input[@id="radio_program_medicaid"]'.</msg>
+<arg>${MAKEAPPOINTMENT}[RAD_MEDICAID]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.552274" elapsed="0.046353"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:09.599131" level="INFO">Clicking element '//input[@id='txt_visit_date']'.</msg>
+<arg>${MAKEAPPOINTMENT}[INP_DATE]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.598883" elapsed="0.062956"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-04T19:42:09.662672" level="INFO">${day} = 05</msg>
+<var>${day}</var>
+<arg>${Visit_Date}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.662267" elapsed="0.000538"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-02-04T19:42:09.663326" level="INFO">${Convert Day} = 5</msg>
+<var>${Convert Day}</var>
+<arg>str(int('${day}'))</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.662991" elapsed="0.000446"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:09.663873" level="INFO">Clicking element '//td[@class='day'][normalize-space()='5']'.</msg>
+<arg>//td[@class='day'][normalize-space()='${Convert Day}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.663615" elapsed="0.052318"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:09.716756" level="INFO">Typing text 'FirstName:Cierra
+LastName:Vega
+Id:604' into text field '//textarea[@id='txt_comment']'.</msg>
+<arg>${MAKEAPPOINTMENT}[INP_COMMENT]</arg>
+<arg>FirstName:${First Name}\nLastName:${Last Name}\nId:${Id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.716309" elapsed="0.157233"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:10.041694" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-45.png"&gt;&lt;img src="selenium-screenshot-45.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-02-04T19:42:09.873936" elapsed="0.167991"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:10.042428" level="INFO">Clicking button '//button[@id='btn-book-appointment']'.</msg>
+<arg>${MAKEAPPOINTMENT}[BTN_BOOK_APPOINTMENT]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:10.042165" elapsed="0.374840"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:10.429973" level="INFO">Current page contains text 'Appointment Confirmation'.</msg>
+<arg>Appointment Confirmation</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-02-04T19:42:10.417552" elapsed="0.012640"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:10.447167" level="INFO">${Facility_Element} = Tokyo CURA Healthcare Center</msg>
+<var>${Facility_Element}</var>
+<arg>${MAKEAPPOINTMENT}[TXT_FACILITY]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:10.430371" elapsed="0.016964"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:10.461642" level="INFO">${Visit_Date_Element} = 05/02/2025</msg>
+<var>${Visit_Date_Element}</var>
+<arg>${MAKEAPPOINTMENT}[TXT_VISIT_DATE]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:10.447523" elapsed="0.014360"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:10.474712" level="INFO">${Comment_Element} = FirstName:Cierra LastName:Vega Id:604</msg>
+<var>${Comment_Element}</var>
+<arg>${MAKEAPPOINTMENT}[TXT_COMMENT]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:10.462173" elapsed="0.012697"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${Facility_Element}</arg>
+<arg>${Facility}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-04T19:42:10.475044" elapsed="0.000210"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${Visit_Date_Element}</arg>
+<arg>${Date}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-04T19:42:10.475361" elapsed="0.000141"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${Comment_Element}</arg>
+<arg>FirstName:${First Name}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-02-04T19:42:10.475597" elapsed="0.000615"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${Comment_Element}</arg>
+<arg>LastName:${Last Name}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-02-04T19:42:10.476406" elapsed="0.000180"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${Comment_Element}</arg>
+<arg>Id:${Id}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-02-04T19:42:10.476694" elapsed="0.000139"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:10.577368" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-46.png"&gt;&lt;img src="selenium-screenshot-46.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-02-04T19:42:10.476938" elapsed="0.100680"/>
+</kw>
+<if>
+<branch type="IF" condition="${Counter} &lt;= ${Facilities Length}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MAKEAPPOINTMENT}[LNK_APPOINTMENT]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-04T19:42:10.578058" elapsed="0.027217"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${MAKEAPPOINTMENT}[LNK_APPOINTMENT]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-04T19:42:10.605534" elapsed="0.283001"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:10.889387" level="INFO">Clicking element '//a[@id='btn-make-appointment']'.</msg>
+<arg>${MAKEAPPOINTMENT}[LNK_APPOINTMENT]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:10.888948" elapsed="0.343061"/>
+</kw>
+<status status="PASS" start="2025-02-04T19:42:10.577771" elapsed="0.654493"/>
+</branch>
+<branch type="ELSE">
+<kw name="Skip" owner="BuiltIn">
+<doc>Skips the rest of the current test.</doc>
+<status status="NOT RUN" start="2025-02-04T19:42:11.232660" elapsed="0.000084"/>
+</kw>
+<status status="NOT RUN" start="2025-02-04T19:42:11.232391" elapsed="0.000437"/>
+</branch>
+<status status="PASS" start="2025-02-04T19:42:10.577738" elapsed="0.655162"/>
+</if>
+<var name="${Facility}">Tokyo CURA Healthcare Center</var>
+<status status="PASS" start="2025-02-04T19:42:09.446403" elapsed="1.786533"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-04T19:42:11.234172" level="INFO">${Counter} = 2</msg>
+<var>${Counter}</var>
+<arg>${${Counter} + 1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-04T19:42:11.233415" elapsed="0.000912"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-04T19:42:11.234687" level="INFO">Booking appointment for Hongkong CURA Healthcare Center</msg>
+<arg>Booking appointment for ${Facility}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-04T19:42:11.234505" elapsed="0.000283"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:11.235163" level="INFO">Selecting options from selection list 'id=combo_facility' by value Hongkong CURA Healthcare Center.</msg>
+<arg>id=combo_facility</arg>
+<arg>${Facility}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-02-04T19:42:11.234930" elapsed="0.063550"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:11.299210" level="INFO">Clicking element '//input[@id="chk_hospotal_readmission"]'.</msg>
+<arg>${MAKEAPPOINTMENT}[CHK_APPLY_HOSPITAL_READMISSION]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:11.298860" elapsed="0.056585"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:11.355950" level="INFO">Clicking element '//input[@id="radio_program_medicaid"]'.</msg>
+<arg>${MAKEAPPOINTMENT}[RAD_MEDICAID]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:11.355702" elapsed="0.051736"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:11.407936" level="INFO">Clicking element '//input[@id='txt_visit_date']'.</msg>
+<arg>${MAKEAPPOINTMENT}[INP_DATE]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:11.407693" elapsed="0.056754"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-04T19:42:11.464915" level="INFO">${day} = 05</msg>
+<var>${day}</var>
+<arg>${Visit_Date}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-04T19:42:11.464699" elapsed="0.000302"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-02-04T19:42:11.465323" level="INFO">${Convert Day} = 5</msg>
+<var>${Convert Day}</var>
+<arg>str(int('${day}'))</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-02-04T19:42:11.465114" elapsed="0.000279"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:11.465704" level="INFO">Clicking element '//td[@class='day'][normalize-space()='5']'.</msg>
+<arg>//td[@class='day'][normalize-space()='${Convert Day}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:11.465510" elapsed="0.065670"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:11.531738" level="INFO">Typing text 'FirstName:Cierra
+LastName:Vega
+Id:604' into text field '//textarea[@id='txt_comment']'.</msg>
+<arg>${MAKEAPPOINTMENT}[INP_COMMENT]</arg>
+<arg>FirstName:${First Name}\nLastName:${Last Name}\nId:${Id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:11.531440" elapsed="0.150671"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:11.776121" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-47.png"&gt;&lt;img src="selenium-screenshot-47.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-02-04T19:42:11.682375" elapsed="0.093978"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:11.776746" level="INFO">Clicking button '//button[@id='btn-book-appointment']'.</msg>
+<arg>${MAKEAPPOINTMENT}[BTN_BOOK_APPOINTMENT]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:11.776532" elapsed="0.356734"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:12.152852" level="INFO">Current page contains text 'Appointment Confirmation'.</msg>
+<arg>Appointment Confirmation</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-02-04T19:42:12.133672" elapsed="0.019412"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:12.166237" level="INFO">${Facility_Element} = Hongkong CURA Healthcare Center</msg>
+<var>${Facility_Element}</var>
+<arg>${MAKEAPPOINTMENT}[TXT_FACILITY]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:12.153270" elapsed="0.013132"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:12.181784" level="INFO">${Visit_Date_Element} = 05/02/2025</msg>
+<var>${Visit_Date_Element}</var>
+<arg>${MAKEAPPOINTMENT}[TXT_VISIT_DATE]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:12.166586" elapsed="0.015414"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:12.195057" level="INFO">${Comment_Element} = FirstName:Cierra LastName:Vega Id:604</msg>
+<var>${Comment_Element}</var>
+<arg>${MAKEAPPOINTMENT}[TXT_COMMENT]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:12.182364" elapsed="0.012912"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${Facility_Element}</arg>
+<arg>${Facility}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-04T19:42:12.195539" elapsed="0.000308"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${Visit_Date_Element}</arg>
+<arg>${Date}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-04T19:42:12.195988" elapsed="0.000203"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${Comment_Element}</arg>
+<arg>FirstName:${First Name}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-02-04T19:42:12.196339" elapsed="0.000202"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${Comment_Element}</arg>
+<arg>LastName:${Last Name}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-02-04T19:42:12.196676" elapsed="0.000176"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${Comment_Element}</arg>
+<arg>Id:${Id}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-02-04T19:42:12.196979" elapsed="0.000175"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:12.294014" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-48.png"&gt;&lt;img src="selenium-screenshot-48.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-02-04T19:42:12.197467" elapsed="0.096778"/>
+</kw>
+<if>
+<branch type="IF" condition="${Counter} &lt;= ${Facilities Length}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MAKEAPPOINTMENT}[LNK_APPOINTMENT]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-04T19:42:12.294641" elapsed="0.011331"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${MAKEAPPOINTMENT}[LNK_APPOINTMENT]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-04T19:42:12.306235" elapsed="0.266611"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:12.573373" level="INFO">Clicking element '//a[@id='btn-make-appointment']'.</msg>
+<arg>${MAKEAPPOINTMENT}[LNK_APPOINTMENT]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:12.573118" elapsed="0.339623"/>
+</kw>
+<status status="PASS" start="2025-02-04T19:42:12.294389" elapsed="0.618516"/>
+</branch>
+<branch type="ELSE">
+<kw name="Skip" owner="BuiltIn">
+<doc>Skips the rest of the current test.</doc>
+<status status="NOT RUN" start="2025-02-04T19:42:12.913184" elapsed="0.000096"/>
+</kw>
+<status status="NOT RUN" start="2025-02-04T19:42:12.912976" elapsed="0.000372"/>
+</branch>
+<status status="PASS" start="2025-02-04T19:42:12.294362" elapsed="0.619040"/>
+</if>
+<var name="${Facility}">Hongkong CURA Healthcare Center</var>
+<status status="PASS" start="2025-02-04T19:42:11.233262" elapsed="1.680168"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-04T19:42:12.914302" level="INFO">${Counter} = 3</msg>
+<var>${Counter}</var>
+<arg>${${Counter} + 1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-04T19:42:12.913762" elapsed="0.000634"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-04T19:42:12.914665" level="INFO">Booking appointment for Seoul CURA Healthcare Center</msg>
+<arg>Booking appointment for ${Facility}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-04T19:42:12.914522" elapsed="0.000226"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:12.915052" level="INFO">Selecting options from selection list 'id=combo_facility' by value Seoul CURA Healthcare Center.</msg>
+<arg>id=combo_facility</arg>
+<arg>${Facility}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-02-04T19:42:12.914876" elapsed="0.073278"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:12.988866" level="INFO">Clicking element '//input[@id="chk_hospotal_readmission"]'.</msg>
+<arg>${MAKEAPPOINTMENT}[CHK_APPLY_HOSPITAL_READMISSION]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:12.988595" elapsed="0.042166"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:13.031519" level="INFO">Clicking element '//input[@id="radio_program_medicaid"]'.</msg>
+<arg>${MAKEAPPOINTMENT}[RAD_MEDICAID]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:13.031151" elapsed="0.045930"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:13.077591" level="INFO">Clicking element '//input[@id='txt_visit_date']'.</msg>
+<arg>${MAKEAPPOINTMENT}[INP_DATE]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:13.077342" elapsed="0.088224"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-04T19:42:13.167345" level="INFO">${day} = 05</msg>
+<var>${day}</var>
+<arg>${Visit_Date}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-04T19:42:13.166589" elapsed="0.000940"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-02-04T19:42:13.168149" level="INFO">${Convert Day} = 5</msg>
+<var>${Convert Day}</var>
+<arg>str(int('${day}'))</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-02-04T19:42:13.167775" elapsed="0.000484"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:13.168774" level="INFO">Clicking element '//td[@class='day'][normalize-space()='5']'.</msg>
+<arg>//td[@class='day'][normalize-space()='${Convert Day}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:13.168448" elapsed="0.055254"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:13.224259" level="INFO">Typing text 'FirstName:Cierra
+LastName:Vega
+Id:604' into text field '//textarea[@id='txt_comment']'.</msg>
+<arg>${MAKEAPPOINTMENT}[INP_COMMENT]</arg>
+<arg>FirstName:${First Name}\nLastName:${Last Name}\nId:${Id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:13.223960" elapsed="0.151088"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:13.477741" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-49.png"&gt;&lt;img src="selenium-screenshot-49.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-02-04T19:42:13.375385" elapsed="0.102592"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:13.478384" level="INFO">Clicking button '//button[@id='btn-book-appointment']'.</msg>
+<arg>${MAKEAPPOINTMENT}[BTN_BOOK_APPOINTMENT]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:13.478160" elapsed="0.355396"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:13.843384" level="INFO">Current page contains text 'Appointment Confirmation'.</msg>
+<arg>Appointment Confirmation</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-02-04T19:42:13.833812" elapsed="0.009904"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:13.871822" level="INFO">${Facility_Element} = Seoul CURA Healthcare Center</msg>
+<var>${Facility_Element}</var>
+<arg>${MAKEAPPOINTMENT}[TXT_FACILITY]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:13.843918" elapsed="0.028153"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:13.896305" level="INFO">${Visit_Date_Element} = 05/02/2025</msg>
+<var>${Visit_Date_Element}</var>
+<arg>${MAKEAPPOINTMENT}[TXT_VISIT_DATE]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:13.872254" elapsed="0.024201"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:13.907284" level="INFO">${Comment_Element} = FirstName:Cierra LastName:Vega Id:604</msg>
+<var>${Comment_Element}</var>
+<arg>${MAKEAPPOINTMENT}[TXT_COMMENT]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:13.896641" elapsed="0.010799"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${Facility_Element}</arg>
+<arg>${Facility}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-04T19:42:13.907621" elapsed="0.000216"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${Visit_Date_Element}</arg>
+<arg>${Date}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-04T19:42:13.908148" elapsed="0.000239"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${Comment_Element}</arg>
+<arg>FirstName:${First Name}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-02-04T19:42:13.908506" elapsed="0.000142"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${Comment_Element}</arg>
+<arg>LastName:${Last Name}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-02-04T19:42:13.908744" elapsed="0.000125"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${Comment_Element}</arg>
+<arg>Id:${Id}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-02-04T19:42:13.908961" elapsed="0.000125"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:14.027713" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-50.png"&gt;&lt;img src="selenium-screenshot-50.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-02-04T19:42:13.909185" elapsed="0.118754"/>
+</kw>
+<if>
+<branch type="IF" condition="${Counter} &lt;= ${Facilities Length}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MAKEAPPOINTMENT}[LNK_APPOINTMENT]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-04T19:42:14.028328" elapsed="0.011993"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${MAKEAPPOINTMENT}[LNK_APPOINTMENT]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-04T19:42:14.040572" elapsed="0.281012"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:14.322279" level="INFO">Clicking element '//a[@id='btn-make-appointment']'.</msg>
+<arg>${MAKEAPPOINTMENT}[LNK_APPOINTMENT]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:14.321943" elapsed="0.324579"/>
+</kw>
+<status status="PASS" start="2025-02-04T19:42:14.028077" elapsed="0.618625"/>
+</branch>
+<branch type="ELSE">
+<kw name="Skip" owner="BuiltIn">
+<doc>Skips the rest of the current test.</doc>
+<status status="NOT RUN" start="2025-02-04T19:42:14.647053" elapsed="0.000082"/>
+</kw>
+<status status="NOT RUN" start="2025-02-04T19:42:14.646839" elapsed="0.000358"/>
+</branch>
+<status status="PASS" start="2025-02-04T19:42:14.028052" elapsed="0.619197"/>
+</if>
+<var name="${Facility}">Seoul CURA Healthcare Center</var>
+<status status="PASS" start="2025-02-04T19:42:12.913643" elapsed="1.733631"/>
+</iter>
+<var>${Facility}</var>
+<value>@{Facilities}</value>
+<status status="PASS" start="2025-02-04T19:42:09.445197" elapsed="5.202207"/>
+</for>
+<arg>@{Facilities}</arg>
+<arg>Visit_Date=${Date}[Day]</arg>
+<arg>Date=${Date}[Visit Date]</arg>
+<arg>First Name=${First Name}</arg>
+<arg>Last Name=${Last Name}</arg>
+<arg>Id=${Id}</arg>
+<doc>This Keyword Verifies Make Appointment</doc>
+<status status="PASS" start="2025-02-04T19:42:09.443650" elapsed="5.203880"/>
+</kw>
+<kw name="Logout The DEMO CURA Website" owner="Websites">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:14.649137" level="INFO">Clicking element '//a[@id='menu-toggle']'.</msg>
+<arg>${LOGOUT}[MENU_TOGGLE]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:14.648940" elapsed="0.052326"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGOUT}[LNK_LOGOUT]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-04T19:42:14.701523" elapsed="0.014284"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:14.716297" level="INFO">Clicking element '//a[normalize-space()='Logout']'.</msg>
+<arg>${LOGOUT}[LNK_LOGOUT]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-04T19:42:14.716056" elapsed="0.797369"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:15.541456" level="INFO">Current page does not contain element '//section[@id='summary']//div[@class='row']'.</msg>
+<arg>${LOGOUT}[TXT_SUMMARY]</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-02-04T19:42:15.513902" elapsed="0.027749"/>
+</kw>
+<msg time="2025-02-04T19:42:15.541789" level="INFO">${Status} = True</msg>
+<var>${Status}</var>
+<arg>Page Should Not Contain Element</arg>
+<arg>${LOGOUT}[TXT_SUMMARY]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-02-04T19:42:15.513683" elapsed="0.028156"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-02-04T19:42:15.874520" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-51.png"&gt;&lt;img src="selenium-screenshot-51.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-02-04T19:42:15.541996" elapsed="0.332770"/>
+</kw>
+<doc>This Keyword Verifies Logout The DEMO CURA Website</doc>
+<status status="PASS" start="2025-02-04T19:42:14.648613" elapsed="1.226268"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-04T19:42:15.875427" elapsed="2.172411"/>
+</kw>
+<doc>Scenario5: Make Appointment and Validate Confirmation For All Facilities Through Parallel Iteration In Herokuapp Website</doc>
+<status status="PASS" start="2025-02-04T19:41:24.896726" elapsed="53.152047"/>
+</test>
+<status status="PASS" start="2025-02-04T19:41:24.059229" elapsed="53.991903"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Katalon" id="s1" pass="1" fail="0" skip="0">Katalon</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-02-04T19:41:24.444340" level="WARN">Error in file 'z:\API Testing\Robot_Selenium_POC\rf-keywords\Websites.resource' on line 163: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
